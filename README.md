@@ -1,4 +1,4 @@
-🚀 ##  YouTube-Style Hover Video Preview (Performance & UX Focused)
+🚀  **YouTube-Style Hover Video Preview (Performance & UX Focused)**
 
 📌 The Problem with Traditional Approaches
 
