@@ -11,14 +11,12 @@ Directly embedding multiple <video> tags into an HTML list (e.g., 20–30 video 
 
 ## 💡 How This Solution Works
 
-This script implements an On-Demand Loading architecture with aggressive memory cleanup and GPU hardware acceleration.
+This script implements an **On-Demand Loading** architecture with aggressive memory cleanup and GPU hardware acceleration.
 1. Lazy Instantiation (Debounced)
 
-    The page initially loads only lightweight, static thumbnail images.
-
-    The <video> element does not exist in the DOM on load.
-
-    The script listens to the mouseover event on cards with a 120 ms debounce delay, preventing accidental video requests when users quickly sweep their mouse across the screen.
+* he page initially loads only lightweight, static thumbnail images.
+* The <video> element does not exist in the DOM on load.
+* The script listens to the mouseover event on cards with a **500 ms debounce delay**, preventing accidental video requests when users quickly sweep their mouse across the screen.
 
 2. Aggressive Memory Management
 
