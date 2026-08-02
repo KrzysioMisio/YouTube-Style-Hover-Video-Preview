@@ -2,6 +2,10 @@
 
 📌 The Problem with Traditional Approaches
 
+# Example headings
+
+## Sample Section
+
 Directly embedding multiple <video> tags into an HTML list (e.g., 20–30 video cards on a gallery page) heavily strains both the browser and the server. Browsers attempt to prefetch metadata and initial buffers for all video files simultaneously, leading to:
 
 - Extremely high client-side RAM and CPU usage.
