@@ -39,3 +39,6 @@ This script implements an **On-Demand Loading** architecture with aggressive mem
 * GPU Hardware Acceleration: Progress bar resizing utilizes `transform: scaleX()` instead of width, shifting layout calculations to the GPU and avoiding expensive browser reflows/layout shifts.
 * Interactive Control: Includes `mute/unmute` toggles, a live time-tracking tooltip calculated dynamically from the cursor position, and click-to-seek functionality.
 * Event Isolation: Uses `e.stopPropagation()` on UI controls (mute button, progress bar) to prevent unintended page loads or link redirections.
+
+## 📊 Performance Comparison
+
