@@ -15,7 +15,7 @@ This script implements an **On-Demand Loading** architecture with aggressive mem
 1. Lazy Instantiation (Debounced)
 
 * he page initially loads only lightweight, static thumbnail images.
-* The <video> element does not exist in the DOM on load.
+* The `<video>` element does not exist in the DOM on load.
 * The script listens to the mouseover event on cards with a **500 ms debounce delay**, preventing accidental video requests when users quickly sweep their mouse across the screen.
 
 2. Aggressive Memory Management
