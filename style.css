@@ -1,4 +1,22 @@
-
+.video-thumbnail-wrapper {
+  position:relative; 
+  width:100%; 
+  padding-bottom:56.25%; 
+  background-color:#000; 
+  overflow:hidden
+}
+.video-thumbnail-wrapper img {
+  position:absolute; 
+  top:0; 
+  left:0; 
+  width:100%; 
+  height:100%; 
+  object-fit:cover; 
+  transition:transform 0.5s ease
+}
+.video-card:hover .video-thumbnail-wrapper img {
+  transform:scale(1.04)
+}
 .video-thumbnail-wrapper {
   position:relative; 
   overflow:hidden
