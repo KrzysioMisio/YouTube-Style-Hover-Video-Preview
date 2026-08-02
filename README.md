@@ -22,7 +22,6 @@ This script implements an **On-Demand Loading** architecture with aggressive mem
 
 * Only **one video preview** can exist and play at any given time across the entire page.
 * When the mouse leaves the card (`mouseout`), the `stopAllHoverVideos()` function is triggered, which:
-
     1. Pauses playback (`video.pause()`).
     2. Destroys the HLS instance (`hls.destroy()`) if a `.m3u8` stream is used.
     3. Clears the source (`video.removeAttribute('src')` and `video.load()`), forcing the browser to immediately release the buffer from RAM.
