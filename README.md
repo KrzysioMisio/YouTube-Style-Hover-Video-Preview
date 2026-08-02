@@ -30,16 +30,12 @@ This script implements an **On-Demand Loading** architecture with aggressive mem
 
 **3. Dual Format Support: MP4 & HLS (`.m3u8`)**
 
-    Automatically detects the video format from the `data-video-src` attribute.
-
-    For `.m3u8` files, it dynamically hooks into HLS.js (or leverages native Safari support), allowing video chunks to load progressively in small, efficient segments (`.ts`).
+* Automatically detects the video format from the `data-video-src` attribute.
+* For `.m3u8` files, it dynamically hooks into HLS.js (or leverages native Safari support), allowing video chunks to load progressively in small, efficient segments (`.ts`).
 
 **4. High-Performance UI (60/120 FPS)**
 
-    Smooth Progress Bar: Instead of using the sluggish `timeupdate` event (which only fires 3–4 times per second), the progress bar is driven by a `requestAnimationFrame()` render loop.
-
-    GPU Hardware Acceleration: Progress bar resizing utilizes `transform: scaleX()` instead of width, shifting layout calculations to the GPU and avoiding expensive browser reflows/layout shifts.
-
-    Interactive Control: Includes `mute/unmute` toggles, a live time-tracking tooltip calculated dynamically from the cursor position, and click-to-seek functionality.
-
-    Event Isolation: Uses `e.stopPropagation()` on UI controls (mute button, progress bar) to prevent unintended page loads or link redirections.
+* Smooth Progress Bar: Instead of using the sluggish `timeupdate` event (which only fires 3–4 times per second), the progress bar is driven by a `requestAnimationFrame()` render loop.
+* GPU Hardware Acceleration: Progress bar resizing utilizes `transform: scaleX()` instead of width, shifting layout calculations to the GPU and avoiding expensive browser reflows/layout shifts.
+* Interactive Control: Includes `mute/unmute` toggles, a live time-tracking tooltip calculated dynamically from the cursor position, and click-to-seek functionality.
+* Event Isolation: Uses `e.stopPropagation()` on UI controls (mute button, progress bar) to prevent unintended page loads or link redirections.
