@@ -1,0 +1,75 @@
+<style type="text/css">
+.video-thumbnail-wrapper {position:relative; overflow:hidden}
+.hover-video-preview {position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; z-index:2; opacity:0; transition:opacity 0.25s ease; pointer-events:none}
+.hover-video-preview.is-playing {opacity:1}
+.js-hover-card:hover .video-play-overlay {opacity:0; transition:opacity 0.2s ease}
+.video-mute-btn {position:absolute; top:10px; right:10px; z-index:10; background:rgba(0, 0, 0, 0.6); color:#ffffff; border:none; border-radius:50%; width:32px; height:32px; display:flex; align-items:center; justify-content:center; cursor:pointer; font-size:13px; opacity:0; transition:opacity 0.2s ease, background 0.2s ease; pointer-events:auto}
+.video-mute-btn:hover {background:rgba(0, 0, 0, 0.85); transform:scale(1.05)}
+.video-thumbnail-wrapper:has(.hover-video-preview.is-playing) .video-mute-btn {opacity:1}
+.video-progress-bar {
+position:absolute;
+bottom:0;
+left:0;
+width:100%;
+height:25px;
+z-index:10;
+opacity:0;
+transition:opacity 0.2s ease;
+cursor:pointer;
+pointer-events:auto;
+display:flex;
+align-items:flex-end;
+}
+.video-progress-bar::before {
+content: '';
+position:absolute;
+bottom:0;
+left:0;
+width:100%;
+height:3px;
+background:rgba(255, 255, 255, 0.3);
+transition:height 0.15s ease;
+}
+.video-progress-fill {
+position:relative;
+width:100%;
+height:3px;
+background-color:#E80000;
+z-index:2;
+transform-origin: left center;
+transform: scaleX(0);
+transition: height 0.15s ease;
+will-change: transform;
+}
+.video-progress-bar:hover::before,
+.video-progress-bar:hover .video-progress-fill {
+height:8px;
+padding-botton:2px;
+margin-bottom:8px
+}
+.video-thumbnail-wrapper:has(.hover-video-preview.is-playing) .video-progress-bar {
+opacity:1;
+}
+.video-time-tooltip {
+position:absolute;
+bottom:24px;
+left:0;
+transform: translateX(-50%);
+background:rgba(0, 0, 0, 0.85);
+color:#ffffff;
+font-size:11px;
+font-weight:600;
+padding:3px 6px;
+border-radius:4px;
+white-space:nowrap;
+opacity:0;
+pointer-events:none;
+transition:opacity 0.15s ease;
+z-index:15;
+font-family:monospace, sans-serif;
+}
+.video-progress-bar:hover .video-time-tooltip {
+opacity:1;
+}
+</style>
+
