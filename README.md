@@ -42,3 +42,9 @@ This script implements an **On-Demand Loading** architecture with aggressive mem
 
 ## 📊 Performance Comparison
 
+| Feature | Standard HTML `<video>` Tags | YouTube-Style Hover Preview Solution |
+| :--- | :--- | :--- |
+| **Initial Network Payload** | Very high (fetching multiple files at once) | **0 KB** for video (poster image only) |
+| **RAM Consumption** | Multiplies with every video on the page | **Constant** (memory allocated for 1 active video) |
+| **Progress Bar Fluidity** | Choppy (`timeupdate` event updates) | **Buttery smooth 60/120 FPS** (`requestAnimationFrame` + GPU) |
+| **UI Conflicts** | Risk of accidental clicks/triggers | Isolated events, complete control over navigation |
